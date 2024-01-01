@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/bookist/static/css/main.7261bb00.css",
+    "main.js": "/bookist/static/js/main.f3ff35a1.js",
+    "static/js/787.3bf6b3da.chunk.js": "/bookist/static/js/787.3bf6b3da.chunk.js",
+    "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/bookist/static/media/PlayfairDisplay-VariableFont_wght.20240034b80f50c3ad00.ttf",
+    "index.html": "/bookist/index.html",
+    "main.7261bb00.css.map": "/bookist/static/css/main.7261bb00.css.map",
+    "main.f3ff35a1.js.map": "/bookist/static/js/main.f3ff35a1.js.map",
+    "787.3bf6b3da.chunk.js.map": "/bookist/static/js/787.3bf6b3da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7261bb00.css",
+    "static/js/main.f3ff35a1.js"
+  ]
+}
