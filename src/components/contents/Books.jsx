@@ -60,9 +60,9 @@ function Books() {
           placeholder="Search..."
           name="query"
           className="input_search"
-          onKeyDown={onEnter} // enter
-          onChange={onTextUpdate} // change
-          value={text} // view
+          onKeyDown={onEnter}
+          onChange={onTextUpdate}
+          value={text}
         />
         <button className="btn_search" onClick={onClick}>
           <FontAwesomeIcon icon={faSearch} />

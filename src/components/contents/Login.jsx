@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
+
+import { useDispatch } from 'react-redux'
+import { changeId } from './../../store'
 function Login(props) {
   const navigate = useNavigate()
   const [id, setId] = useState('')
   const [pw, setPw] = useState('')
+
+  let dispatch = useDispatch()
+
   return (
-    <motion.div
-      className="login_box"
-      // intial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
-    >
+    <div className="login_box">
       <input
         type="text"
         name="id"
@@ -33,11 +33,12 @@ function Login(props) {
         disabled={!id || !pw}
         onClick={() => {
           navigate(`/main`)
+          dispatch(changeId(id))
         }}
       >
         {!id || !pw ? 'Please fill in the blank' : 'Go!'}
       </button>
-    </motion.div>
+    </div>
   )
 }
 

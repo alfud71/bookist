@@ -47,8 +47,8 @@ function BookList(props) {
     >
       <div className="search_area">
         <input
-          type="text"
-          placeholder="Search"
+          type="search"
+          placeholder="Search..."
           value={search}
           onChange={onChange}
         />

@@ -2,10 +2,13 @@ import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import LoremIpsum from 'react-lorem-ipsum'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 export default function Header() {
+  let userId = useSelector((state) => {
+    return state.id
+  })
   return (
     <header>
       <h1 className="logo">
@@ -16,7 +19,7 @@ export default function Header() {
         <LoremIpsum p={1} />
       </div>
       <ul>
-        <li className="user_name">asdf 🤍</li>
+        <li className="user_name">{userId} 🤍</li>
         <li>
           <Link to="/" title="Logout">
             <FontAwesomeIcon icon={faRightFromBracket} />

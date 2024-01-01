@@ -1,20 +1,17 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { useDispatch } from 'react-redux'
+import { changeId } from './../../store'
+
 function SignUp(props) {
   const navigate = useNavigate()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [signUpId, setSignUpId] = useState('')
   const [signUpPw, setSignUpPw] = useState('')
-
+  let dispatch = useDispatch()
   return (
-    <motion.div
-      className="signup_box"
-      // intial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
-    >
+    <div className="signup_box">
       <input
         type="text"
         value={name}
@@ -48,13 +45,14 @@ function SignUp(props) {
         disabled={!name || !email || !signUpId || !signUpPw}
         onClick={() => {
           navigate(`/main`)
+          dispatch(changeId(signUpId))
         }}
       >
         {!name || !email || !signUpId || !signUpPw
           ? 'Please fill in the blank'
           : 'Go!'}
       </button>
-    </motion.div>
+    </div>
   )
 }
 
