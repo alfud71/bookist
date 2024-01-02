@@ -20,12 +20,12 @@ function Nav(props) {
         </li>
         <li>
           <Link to="/main/filterlist" title="main">
-            filtering Books
+            Filtering Books
           </Link>
         </li>
         <li>
           <Link to="/book/sorry.." title="main">
-            Error page
+            Error Page
           </Link>
         </li>
         {/* {props.menu.map((menuTitle, i) => {
