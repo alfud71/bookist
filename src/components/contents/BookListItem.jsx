@@ -7,7 +7,7 @@ function BookListItem(props) {
     <>
       <li>
         <Link to={`/main/detail/${props.book.index}`} className="book_box">
-          <img src={props.book.img} alt="Book" />
+          <img src={process.env.PUBLIC_URL + props.book.img} alt="Book" />
           <div className="book_desc">
             <b className="book_title">{props.book.title}</b>
             <span className="book_author">{props.book.author}</span>
